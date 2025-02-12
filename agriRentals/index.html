@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriRentals</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/748d028947.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+    <style>
+        .logout-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-left: auto;
+            text-decoration: none;
+        }
+
+        .logout-btn:hover {
+            background-color: #d32f2f;
+            transform: scale(1.05);
+        }
+
+        .navbar__btn {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="/" id="navbar__logo"><i class="fas fa-gem"></i>AgriRentals</a>
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+    <ul class="navbar__menu">
+        <li class="navbar__item">
+            <a href="index.html" class="navbar__links">Home</a>
+        </li>
+        <li class="navbar__item">
+            <a href="tech.html" class="navbar__links">Our Story</a>
+        </li>
+        <li class="navbar__item">
+            <a href="products.php" class="navbar__links">Equipment</a>
+        </li>
+        <li class="navbar__btn">
+            <a href="ContactUs.html" class="navbar__links">Contact Us</a>
+        </li>
+        <li class="navbar__btn">
+            <a href="logout.php" class="navbar__links">Logout</a>
+        </li>
+    </ul>
+  </nav>
+
+  <div class="main">
+    <div class="main__container">
+        <div class="main__content">
+            <h1>Farming For Next Generation</h1>
+            <h2>Effort in hand with TECHNOLOGY</h2>
+            <p>Farming is a noble way of life</p>
+            <button><div class="main__btn"><a href="products.html" class="">Get Started</a></div></button>
+        </div>
+        <div class="main__img--container">
+            <img src="images/pic1.svg" alt="pic" id="main__img">
+        </div>
+    </div>
+  </div>
+  
+  <div class="services">
+    <h1>We provide what's best for you</h1>
+    <div class="services__container">
+      <div class="services__card">
+        <h2>Learn About FarmLife</h2>
+        <p>With Gold Shaw Farm</p>
+        <button><div class="main__btn a"><a href="https://www.youtube.com/watch?time_continue=1&v=25Pt1AZO9EM&embeds_referring_euri=https%3A%2F%2Fwww.bing.com%2F&embeds_referring_origin=https%3A%2F%2Fwww.bing.com&source_ve_path=MjM4NTE" class="">Let's Get Started</a></div></button>
+      </div>
+      <div class="services__card">
+        <h2>History of Farming</h2>
+        <p>Of Nepal</p>
+        <button><div class="main__btn"><a href="https://factsanddetails.com/south-asia/Nepal/Economics_and_Agriculture_Nepal/entry-7867.html" class="">Let's Get Started</a></div></button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer__container">
+    <div class="footer__links">
+      <div class="footer__link--wrapper">
+        <div class="social__media">
+          <div class="social__media--wrap">
+            <p class="website__rights">© Next 2024. All rights</p>
+            <div class="social__icons">
+              <a href="https://www.facebook.com/permalink.php/?story_fbid=118692933943203&id=111493141329849" class="social__icon--link" target="_blank">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="https://www.instagram.com/farmequipmentusa/" class="social__icon--link" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/farm-equipment-magazine" class="social__icon--link" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://www.youtube.com/@agribizke" class="social__icon--link" target="_blank">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>  
+</body>
+</html>

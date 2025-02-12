@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AgriRentals</title>
+    <link rel="stylesheet" href="Contact.css">
+    <script src="https://kit.fontawesome.com/748d028947.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+    <style>
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+        .contact-form {
+            max-width: 600px;
+            width: 100%;
+            background-color: #f4f4f4;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .contact-form h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .contact-info {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            color: #333;
+        }
+        .contact-form input, .contact-form textarea, .contact-form button {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .contact-form button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+        .map-container {
+            width: 100%;
+            height: auto;
+            max-width: 800px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 1rem;
+        }
+        .map-header {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #f4f4f4;
+            margin-top: 2rem;
+        }
+        .thank-you-message {
+            color: green;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            document.getElementById('thankYouMessage').style.display = 'block';
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="navbar__container">
+        <a href="/" id="navbar__logo"><i class="fas fa-gem"></i>AgriRentals</a>
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="index.html" class="navbar__links">Home</a>
+            </li>
+            <li class="navbar__item">
+                <a href="tech.html" class="navbar__links">Our Story</a>
+            </li>
+            <li class="navbar__item">
+                <a href="products.php" class="navbar__links">Equipment</a>
+            </li>
+            <li class="navbar__btn">
+                <a href="ContactUs.html" class="navbar__links">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="contact-container">
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p> Phone: 9818181811</p>
+            <p>Email: <a href="mailto:farmguy@gmail.com">farmguy@gmail.com</a></p>
+        </div>
+        <div id ="thankYouMessage" class="thank-you-message" style="display:none;">We are thankful for your message!</div>
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    
+    <div class="map-container">
+        <div class="map-header">Our Location</div>
+        <img src="images/map.png" alt="AgriRentals Location Map">
+    </div>
+</div>
+
+<footer>
+    <p class="website__rights">© AgriRentals 2024. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

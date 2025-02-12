@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriRentals Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
+    <style>
+        .logout-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.3s, transform 0.2s;
+            display: flex;
+            align-items: center;
+        }
+
+        .logout-btn i {
+            margin-right: 5px;
+        }
+
+        .logout-btn:hover {
+            background-color: #d32f2f;
+            transform: scale(1.05);
+        }
+
+        .logout-btn:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <section id="menu">
+        <div class="logo">
+            <img src="images/logo.png" alt="">
+            <h2>AgriRentals</h2>
+        </div>
+    
+        <div class="items">
+            <li><i class="fa-solid fa-chart-pie"></i><a href="admin.html">Dashboard</a></li>
+            <li><i class="fa-solid fa-chart-line"></i><a href="add_equipment.html">Equipment</a></li>
+            <li><i class="fa-solid fa-table-list"></i><a href="admin_page.php">users</a></li>
+            <li><i class="fa-solid fa-suitcase"></i><a href="admin_service.">Our Equipment</a></li>
+        </div>
+    </section>
+    
+    <section id="interface">
+        <div class="navigation">
+            <div class="n1">
+                <div>
+                    <i id="menu-btn" class="fa-solid fa-heart"></i>
+                </div>
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchBar" placeholder="search" onkeyup="linearSearch()">
+                </div>
+            </div>
+            <div class="profile">
+                <i class="far fa-bell"></i>
+                <img src="images/admin.png" alt="admin">
+                <form action="logout.php" method="POST" style="display:inline;">
+                    <button type="submit" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
+                </form>
+            </div>
+        </div>
+        <h3 class="i-name">Dashboard</h3>
+
+        <div class="values">
+            <div class="val-box">
+                <i class="fas fa-users"></i>
+                <div>
+                    <h3>237</h3>
+                    <span>New users</span>
+                </div>
+            </div>
+            <div class="val-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <div>
+                    <h3>60</h3>
+                    <span>Total Equipment</span>
+                </div>
+            </div>
+            <div class="val-box">
+                <i class="fas fa-table-list"></i>
+                <div>
+                    <h3>23</h3>
+                    <span>Rented Equipment</span>
+                </div>
+            </div>
+            <div class="val-box">
+                <i class="fas fa-chart-line"></i>
+                <div>
+                    <h3>RS 38,000</h3>
+                    <span>Transactions</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="board">
+            <table width="100%" id="userTable">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Title</td>
+                        <td>Status</td>
+                        <td>Role</td <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="people">
+                            <img src="images/investor6.jpg" alt="">
+                            <div class="people-de">
+                                <h5>Diopla Roy</h5>
+                                <p>farmguy@gmail.com</p>
+                            </div>
+                        </td>
+                        <td class="people-des">
+                            <h5>Software Engineer</h5>
+                            <p>Web dev</p>
+                        </td>
+                        <td class="active"><p>active</p></td>
+                        <td class="role">
+                            <p>Owner</p>
+                        </td>
+                        <td class="edit"><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td class="people">
+                            <img src="images/investor5.jpg" alt="">
+                            <div class="people-de">
+                                <h5>Acchilies Wills</h5>
+                                <p>farmguy11@gmail.com</p>
+                            </div>
+                        </td>
+                        <td class="people-des">
+                            <h5>Admin</h5>
+                            <p>Data management</p>
+                        </td>
+                        <td class="active"><p>active</p></td>
+                        <td class="role">
+                            <p>Admin</p>
+                        </td>
+                        <td class="edit"><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td class="people">
+                            <img src="images/investor4.jpg" alt="">
+                            <div class="people-de">
+                                <h5>Oddy Lian</h5>
+                                <p>guyiam@gmail.com</p>
+                            </div>
+                        </td>
+                        <td class="people-des">
+                            <h5>Database Manager</h5>
+                            <p>Database management</p>
+                        </td>
+                        <td class="active"><p>active</p></td>
+                        <td class="role">
+                            <p>Data management</p>
+                        </td>
+                        <td class="edit"><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td class="people">
+                            <img src="images/investor3.jpg" alt="">
+                            <div class="people-de">
+                                <h5>Shotgun Farmer</h5>
+                                <p>farmy@gmail.com</p>
+                            </div>
+                        </td>
+                        <td class="people-des">
+                            <h5>Server Maintenance</h5>
+                            <p>Server work</p>
+                        </td>
+                        <td class="active"><p>deactive</p></td>
+                        <td class="role">
+                            <p>Worker</p>
+                        </td>
+                        <td class="edit"><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td class="people">
+                            <img src="images/investor2.jpg" alt="">
+                            <div class="people-de">
+                                <h5>Circi Wave</h5>
+                                <p>Oceanwave@gmail.com</p>
+                            </div>
+                        </td>
+                        <td class="people-des">
+                            <h5>Admin</h5>
+                            <p>Inventory management</p>
+                        </td>
+                        <td class="active"><p>active</p></td>
+                        <td class="role">
+                            <p>Worker</p>
+                        </td>
+                        <td class="edit"><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td class="people">
+                            <img src="images/investor1.jpg" alt="">
+                            <div class="people-de">
+                                <h5>Suman Loha</h5>
+                                <p>suman@gmail.com</p>
+                            </div>
+                        </td>
+                        <td class="people-des">
+                            <h5>Worker</h5>
+                            <p>Worker</p>
+                        </td>
+                        <td class="active"><p>deactive</p></td>
+                        <td class="role">
+                            <p>Worker</p>
+                        </td>
+                        <td class="edit"><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td class="people">
+                            <img src="images/admin.png" alt="">
+                            <div class="people-de">
+                                <h5>Fkea Naem</h5>
+                                <p>Farmer@gmail.com</p>
+                            </div>
+                        </td>
+                        <td class="people-des">
+                            <h5>Worker </h5>
+                            <p>Worker</p>
+                        </td>
+                        <td class="active"><p>active</p></td>
+                        <td class="role">
+                            <p>Worker</p>
+                        </td>
+                        <td class="edit"><a href="#">Edit</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <script>
+        $('#menu-btn').click(function(){
+            $('#menu').toggleClass("active");
+        });
+
+        function linearSearch() {
+            const searchValue = document.getElementById('searchBar').value.toLowerCase();
+            const rows = document.querySelectorAll('#userTable tbody tr');
+
+            rows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                let found = false;
+
+                cells.forEach(cell => {
+                    if (cell.textContent.toLowerCase().includes(searchValue)) {
+                        found = true;
+                    }
+                });
+
+                if (found) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
